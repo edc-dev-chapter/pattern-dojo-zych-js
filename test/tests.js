@@ -1,5 +1,9 @@
 const expect = require('chai').expect;
+<<<<<<< HEAD
 const Utils = require('../utils/utils');
+=======
+const implements = require('../utils/utils');
+>>>>>>> Add interfaces and tests
 
 const Subject = require('../src/interfaces/subject');
 const Subscriber = require('../src/interfaces/subscriber');
