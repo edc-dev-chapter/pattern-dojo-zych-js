@@ -1,9 +1,5 @@
 const expect = require('chai').expect;
-<<<<<<< HEAD
 const Utils = require('../utils/utils');
-=======
-const implements = require('../utils/utils');
->>>>>>> Add interfaces and tests
 
 const Subject = require('../src/interfaces/subject');
 const Subscriber = require('../src/interfaces/subscriber');
@@ -27,5 +23,28 @@ describe('Tests', () => {
 
     it('classStockExchangeImplementsSubject', () => {
         expect(Utils.implements(StockExchange, Subject)).to.be.true;
+    })
+
+    it('stockExchangeAcceptsNewSubscribers', () => {
+        const stockExchange = new StockExchange();
+        stockExchange.addSubscriber((a, b) => {});
+        expect(stockExchange.subscribers.length).to.be.equal(1);
+    })
+
+    it('stockExchangeShouldRemoveExistingSubscribers', () => {
+        const stockExchange = new StockExchange();
+        stockExchange.addSubscriber((a, b) => {});
+        stockExchange.removeSubscriber(stockExchange.subscribers[0]);
+        expect(stockExchange.subscribers.length).to.be.equal(0);
+    })
+
+    it('stockExchangeShouldNotRemoveSubscriberIfNotSubscribed', () => {
+        const stockExchange = new StockExchange();
+        const sub = (a, b) => {};
+        stockExchange.addSubscriber((a, b) => {});
+        stockExchange.addSubscriber(sub);
+        stockExchange.removeSubscriber((a, b) => {});
+        stockExchange.removeSubscriber(sub);
+        expect(stockExchange.subscribers.length).to.be.equal(1);
     })
 });

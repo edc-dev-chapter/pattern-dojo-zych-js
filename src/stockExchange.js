@@ -5,8 +5,9 @@ class StockExchange extends Subject {
         super();
         this.exchangeRates = {};
         this.indices = {};
+        this.subscribers = [];
     }
-    
+
     addSubscriber(subscriber) {};
     removeSubscriber(subscriber) {};
     notifySubscribers() {};
