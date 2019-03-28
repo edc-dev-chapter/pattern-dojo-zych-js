@@ -12,4 +12,8 @@ const implements = (objectClass, interface) => {
     return isPrototype && areOk;
 }
 
-module.exports = implements;
+const Utils = {
+    implements
+}
+
+module.exports = Utils;
