@@ -8,8 +8,12 @@ class StockExchange extends Subject {
         this.subscribers = [];
     }
 
-    addSubscriber(subscriber) {};
-    removeSubscriber(subscriber) {};
+    addSubscriber(subscriber) {
+        this.subscribers.push(subscriber);
+    };
+    removeSubscriber(subscriber) {
+        this.subscribers = this.subscribers.filter(item => item !== subscriber);
+    };
     notifySubscribers() {};
 }
 
