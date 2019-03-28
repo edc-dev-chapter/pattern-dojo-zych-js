@@ -1,5 +1,5 @@
 # Observer Pattern Dojo
-Based on Java repository..
+Based on Java repository.. https://github.com/edc-dev-chapter/patterns-dojo-zych
 
 ### Description
 We have a Stock Exchange market that is represented by class StockExchange.
@@ -13,9 +13,20 @@ changes to existing channels or Stock Market class.
  
 
 ### Requirements
- * see packgage.json file
+ * node 8+
 
 
 ### How To start
 This branch is just a starting point. To go to first step - checkout branch `observer-step1` and 
 follow instructions in updated Readme.
+
+### Step1
+Run tests found in test/tests.js. Tests will fail. 
+Your job is to make tests pass. You cannot change implementation of tests, but you have to change
+implementation of existing classes. In this step implement correct interfaces in classes
+* StockExchange
+* SmartphoneApp
+* TvStrip
+* WebsiteChart
+
+If your tests are passing, go ahead and checkout `observer-step2` branch and read Readme document.
