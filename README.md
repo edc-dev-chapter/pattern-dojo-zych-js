@@ -1,5 +1,5 @@
 # Observer Pattern Dojo
-Based on Java repository..
+Based on Java repository.. https://github.com/edc-dev-chapter/patterns-dojo-zych
 
 ### Description
 We have a Stock Exchange market that is represented by class StockExchange.
@@ -13,7 +13,7 @@ changes to existing channels or Stock Market class.
  
 
 ### Requirements
- * see packgage.json file
+ * node 8+
 
 
 ### How To start
