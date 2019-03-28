@@ -15,6 +15,22 @@ class StockExchange extends Subject {
         this.subscribers = this.subscribers.filter(item => item !== subscriber);
     };
     notifySubscribers() {};
+
+    setExchangeRates(exchangeRates) {
+        this.exchangeRates = exchangeRates;
+    };
+
+    setIndices(indices) {
+        this.indices = indices;
+    };
+
+    updateExchangeRate(company, rate) {
+        this.exchangeRates[company] = rate;
+    };
+
+    updateIndex(indexName, rate) {
+        this.indices[indexName] = rate;
+    };
 }
 
 module.exports = StockExchange;
