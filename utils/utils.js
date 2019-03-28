@@ -12,8 +12,15 @@ const implements = (objectClass, interface) => {
     return isPrototype && areOk;
 }
 
+class Display {
+    show(data) {
+        console.log(data);
+    }
+}
+
 const Utils = {
-    implements
+    implements,
+    display: new Display()
 }
 
 module.exports = Utils;
